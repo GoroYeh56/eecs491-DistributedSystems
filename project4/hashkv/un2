@@ -1,0 +1,1000 @@
+Test: Basic joins Unreliable ...
+Initialize HashKV /var/tmp/824-501/skv-4721-basic-0,ID 1557701964540789140 
+	Pred: /var/tmp/824-501/skv-4721-basic-0 Succ:/var/tmp/824-501/skv-4721-basic-0
+	Range: (14, 14]
+	Active: true
+2022/11/03 10:02:13 rpc.Register: method "HashCollision" has 2 input parameters; needs exactly three
+2022/11/03 10:02:13 rpc.Register: method "InitImpl" has 1 input parameters; needs exactly three
+2022/11/03 10:02:13 rpc.Register: method "IsActive" has 1 input parameters; needs exactly three
+2022/11/03 10:02:13 rpc.Register: method "KillImpl" has 1 input parameters; needs exactly three
+2022/11/03 10:02:13 rpc.Register: method "PackDBandClientHistory" has 1 input parameters; needs exactly three
+2022/11/03 10:02:13 rpc.Register: method "Setunreliable" has 2 input parameters; needs exactly three
+2022/11/03 10:02:13 rpc.Register: method "UpdateClientLatestReqID" has 2 input parameters; needs exactly three
+2022/11/03 10:02:13 rpc.Register: method "UpdateDB" has 2 input parameters; needs exactly three
+2022/11/03 10:02:13 rpc.Register: method "UpdatePredecessor" has 4 input parameters; needs exactly three
+2022/11/03 10:02:13 rpc.Register: method "UpdateSuccessor" has 4 input parameters; needs exactly three
+2022/11/03 10:02:13 rpc.Register: method "ValidForNewServer" has 4 input parameters; needs exactly three
+	Success! Client 2511151759505815740 send Put(7899646871198389362, 4910662540533427873)
+	Success! Client 2511151759505815740 send Put(8753391632062848549, 5552838162951527371)
+	Success! Client 2511151759505815740 send Put(6953702870357627536, 9186600793444575422)
+	Success! Client 2511151759505815740 send Put(8744483788123718559, 7282556962804256652)
+	Success! Client 2511151759505815740 send Put(2454555844678642032, 1993683209786755838)
+	Success! Client 2511151759505815740 send Put(7874282789606164087, 6230971285351104152)
+	Success! Client 2511151759505815740 send Put(5168842752386029040, 3103619485991849869)
+	Success! Client 2511151759505815740 send Put(3505044670527352527, 8041672430826158362)
+	Success! Client 2511151759505815740 send Put(2729832264327020533, 8613856519144789619)
+	Success! Client 2511151759505815740 send Put(2324404556830793034, 1591218183893804905)
+	Success! Client 2511151759505815740 send Put(8163198790876833724, 6865807573577631547)
+	Success! Client 2511151759505815740 send Put(5104132458200192381, 1660331821692409763)
+	Success! Client 2511151759505815740 send Put(3152674699636597962, 5853300996389342721)
+	Success! Client 2511151759505815740 send Put(1846594741936594345, 4229764148946570337)
+	Success! Client 2511151759505815740 send Put(1931959332442411658, 6827879312631204196)
+	Success! Client 2511151759505815740 send Put(5961882901650070508, 6055647157733248470)
+	Success! Client 2511151759505815740 send Put(4893430639698753863, 4088288327718367127)
+	Success! Client 2511151759505815740 send Put(5992047186422441599, 4504596533421180517)
+	Success! Client 2511151759505815740 send Put(8966907719052175756, 6479855737210013663)
+	Success! Client 2511151759505815740 send Put(4236752630425850685, 2116486669982250955)
+Initialize HashKV /var/tmp/824-501/skv-4721-basic-1,ID 1955120657005854999 
+	Pred: /var/tmp/824-501/skv-4721-basic-0 Succ:/var/tmp/824-501/skv-4721-basic-0
+
+[RPC] Successor /var/tmp/824-501/skv-4721-basic-0 preparing k/v pairs to new Server: /var/tmp/824-501/skv-4721-basic-1
+	Transfering (5104132458200192381, 1660331821692409763) shard 3 to new server /var/tmp/824-501/skv-4721-basic-1
+	Transfering (6953702870357627536, 9186600793444575422) shard 1 to new server /var/tmp/824-501/skv-4721-basic-1
+	Transfering (2454555844678642032, 1993683209786755838) shard 1 to new server /var/tmp/824-501/skv-4721-basic-1
+	Transfering (5961882901650070508, 6055647157733248470) shard 0 to new server /var/tmp/824-501/skv-4721-basic-1
+	Transfering (5168842752386029040, 3103619485991849869) shard 3 to new server /var/tmp/824-501/skv-4721-basic-1
+	Transfering (2324404556830793034, 1591218183893804905) shard 1 to new server /var/tmp/824-501/skv-4721-basic-1
+	Transfering (8744483788123718559, 7282556962804256652) shard 3 to new server /var/tmp/824-501/skv-4721-basic-1
+	Transfering (8966907719052175756, 6479855737210013663) shard 0 to new server /var/tmp/824-501/skv-4721-basic-1
+	Transfering (7899646871198389362, 4910662540533427873) shard 2 to new server /var/tmp/824-501/skv-4721-basic-1
+	Transfering (8753391632062848549, 5552838162951527371) shard 15 to new server /var/tmp/824-501/skv-4721-basic-1
+	Done scanning /var/tmp/824-501/skv-4721-basic-0 Database. Now update kv.pred to new server /var/tmp/824-501/skv-4721-basic-1
+	Add (6953702870357627536, 9186600793444575422) to /var/tmp/824-501/skv-4721-basic-1 DB
+	Add (2454555844678642032, 1993683209786755838) to /var/tmp/824-501/skv-4721-basic-1 DB
+	Add (8753391632062848549, 5552838162951527371) to /var/tmp/824-501/skv-4721-basic-1 DB
+	Add (2324404556830793034, 1591218183893804905) to /var/tmp/824-501/skv-4721-basic-1 DB
+	Add (8744483788123718559, 7282556962804256652) to /var/tmp/824-501/skv-4721-basic-1 DB
+	Add (8966907719052175756, 6479855737210013663) to /var/tmp/824-501/skv-4721-basic-1 DB
+	Add (5961882901650070508, 6055647157733248470) to /var/tmp/824-501/skv-4721-basic-1 DB
+	Add (5168842752386029040, 3103619485991849869) to /var/tmp/824-501/skv-4721-basic-1 DB
+	Add (7899646871198389362, 4910662540533427873) to /var/tmp/824-501/skv-4721-basic-1 DB
+	Add (5104132458200192381, 1660331821692409763) to /var/tmp/824-501/skv-4721-basic-1 DB
+	Add ({2511151759505815740 8753391632062848549}, 1) to /var/tmp/824-501/skv-4721-basic-1 ClientLatestReqID
+	Add ({2511151759505815740 2454555844678642032}, 4) to /var/tmp/824-501/skv-4721-basic-1 ClientLatestReqID
+	Add ({2511151759505815740 4893430639698753863}, 16) to /var/tmp/824-501/skv-4721-basic-1 ClientLatestReqID
+	Add ({2511151759505815740 2729832264327020533}, 8) to /var/tmp/824-501/skv-4721-basic-1 ClientLatestReqID
+	Add ({2511151759505815740 6953702870357627536}, 2) to /var/tmp/824-501/skv-4721-basic-1 ClientLatestReqID
+	Add ({2511151759505815740 8744483788123718559}, 3) to /var/tmp/824-501/skv-4721-basic-1 ClientLatestReqID
+	Add ({2511151759505815740 1931959332442411658}, 14) to /var/tmp/824-501/skv-4721-basic-1 ClientLatestReqID
+	Add ({2511151759505815740 8163198790876833724}, 10) to /var/tmp/824-501/skv-4721-basic-1 ClientLatestReqID
+	Add ({2511151759505815740 4236752630425850685}, 19) to /var/tmp/824-501/skv-4721-basic-1 ClientLatestReqID
+	Add ({2511151759505815740 2324404556830793034}, 9) to /var/tmp/824-501/skv-4721-basic-1 ClientLatestReqID
+	Add ({2511151759505815740 7874282789606164087}, 5) to /var/tmp/824-501/skv-4721-basic-1 ClientLatestReqID
+	Add ({2511151759505815740 5992047186422441599}, 17) to /var/tmp/824-501/skv-4721-basic-1 ClientLatestReqID
+	Add ({2511151759505815740 3152674699636597962}, 12) to /var/tmp/824-501/skv-4721-basic-1 ClientLatestReqID
+	Add ({2511151759505815740 5168842752386029040}, 6) to /var/tmp/824-501/skv-4721-basic-1 ClientLatestReqID
+	Add ({2511151759505815740 1846594741936594345}, 13) to /var/tmp/824-501/skv-4721-basic-1 ClientLatestReqID
+	Add ({2511151759505815740 5961882901650070508}, 15) to /var/tmp/824-501/skv-4721-basic-1 ClientLatestReqID
+	Add ({2511151759505815740 8966907719052175756}, 18) to /var/tmp/824-501/skv-4721-basic-1 ClientLatestReqID
+	Add ({2511151759505815740 7899646871198389362}, 0) to /var/tmp/824-501/skv-4721-basic-1 ClientLatestReqID
+	Add ({2511151759505815740 5104132458200192381}, 11) to /var/tmp/824-501/skv-4721-basic-1 ClientLatestReqID
+	Add ({2511151759505815740 3505044670527352527}, 7) to /var/tmp/824-501/skv-4721-basic-1 ClientLatestReqID
+	Range: (14, 3]
+	Active: true
+	Update server /var/tmp/824-501/skv-4721-basic-0 successor => /var/tmp/824-501/skv-4721-basic-1
+	Update server /var/tmp/824-501/skv-4721-basic-0 predecessor => /var/tmp/824-501/skv-4721-basic-1
+	Update server /var/tmp/824-501/skv-4721-basic-0 Range: (3, 14]
+2022/11/03 10:02:13 rpc.Register: method "HashCollision" has 2 input parameters; needs exactly three
+2022/11/03 10:02:13 rpc.Register: method "InitImpl" has 1 input parameters; needs exactly three
+2022/11/03 10:02:13 rpc.Register: method "IsActive" has 1 input parameters; needs exactly three
+2022/11/03 10:02:13 rpc.Register: method "KillImpl" has 1 input parameters; needs exactly three
+2022/11/03 10:02:13 rpc.Register: method "PackDBandClientHistory" has 1 input parameters; needs exactly three
+2022/11/03 10:02:13 rpc.Register: method "Setunreliable" has 2 input parameters; needs exactly three
+2022/11/03 10:02:13 rpc.Register: method "UpdateClientLatestReqID" has 2 input parameters; needs exactly three
+2022/11/03 10:02:13 rpc.Register: method "UpdateDB" has 2 input parameters; needs exactly three
+2022/11/03 10:02:13 rpc.Register: method "UpdatePredecessor" has 4 input parameters; needs exactly three
+2022/11/03 10:02:13 rpc.Register: method "UpdateSuccessor" has 4 input parameters; needs exactly three
+2022/11/03 10:02:13 rpc.Register: method "ValidForNewServer" has 4 input parameters; needs exactly three
+unexpected EOF
+unexpected EOF
+unexpected EOF
+	Get Success: client 3036402110774680217 Get(3152674699636597962) : 5853300996389342721
+	Get Success: client 3977469420392876132 Get(7899646871198389362) : 4910662540533427873
+	Get Success: client 1308918338979484165 Get(5168842752386029040) : 3103619485991849869
+	Get Success: client 3088940302902154208 Get(5992047186422441599) : 4504596533421180517
+	Get Success: client 4237279842903208790 Get(8753391632062848549) : 5552838162951527371
+	Get Success: client 3066220857113827238 Get(4893430639698753863) : 4088288327718367127
+	Get Success: client 2718019489943265286 Get(8744483788123718559) : 7282556962804256652
+	Get Success: client 4343893113930658188 Get(5104132458200192381) : 1660331821692409763
+	Get Success: client 3874752243028236048 Get(8163198790876833724) : 6865807573577631547
+	Get Success: client 47205957010764594 Get(1931959332442411658) : 6827879312631204196
+	Get Success: client 2714922560334349840 Get(1846594741936594345) : 4229764148946570337
+	Get Success: client 4429918723349466092 Get(7874282789606164087) : 6230971285351104152
+	Get Success: client 1619537527236560943 Get(6953702870357627536) : 9186600793444575422
+unexpected EOF
+	Get Success: client 4031975503216535607 Get(2729832264327020533) : 8613856519144789619
+	Get Success: client 2137218888398585179 Get(4236752630425850685) : 2116486669982250955
+	Get Success: client 3601537660301394127 Get(3505044670527352527) : 8041672430826158362
+	Get Success: client 3906253802200754197 Get(5961882901650070508) : 6055647157733248470
+	Get Success: client 2495373309731014166 Get(2324404556830793034) : 1591218183893804905
+	Get Success: client 664090741983876376 Get(2454555844678642032) : 1993683209786755838
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-1: write: broken pipe
+	Get Success: client 959371178160938347 Get(8966907719052175756) : 6479855737210013663
+	Success! Client 3139271868990922739 send Put(8163198790876833724, 949106807538086164)
+	Success! Client 3139271868990922739 send Put(3152674699636597962, 4502998603871911412)
+	Success! Client 3139271868990922739 send Put(5961882901650070508, 6443534474227794993)
+unexpected EOF
+	Success! Client 3139271868990922739 send Put(4893430639698753863, 2110964770823186523)
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-1: write: broken pipe
+	Success! Client 3139271868990922739 send Put(8753391632062848549, 2104714039950466573)
+unexpected EOF
+	Success! Client 3139271868990922739 send Put(8744483788123718559, 7849433649748967041)
+	Success! Client 3139271868990922739 send Put(2454555844678642032, 11908876815650231)
+	Success! Client 3139271868990922739 send Put(3505044670527352527, 1518947675490675164)
+	Success! Client 3139271868990922739 send Put(5992047186422441599, 7996254587863944223)
+	Success! Client 3139271868990922739 send Put(1846594741936594345, 534042737455167594)
+	Success! Client 3139271868990922739 send Put(4236752630425850685, 1430861371294689027)
+	Success! Client 3139271868990922739 send Put(7899646871198389362, 8310855531485761109)
+	Success! Client 3139271868990922739 send Put(6953702870357627536, 1835266102988072218)
+	Success! Client 3139271868990922739 send Put(5104132458200192381, 3727053863590826641)
+	Success! Client 3139271868990922739 send Put(1931959332442411658, 5175732549253889441)
+write unix ->/var/tmp/824-501/skv-4721-basic-1: write: broken pipe
+	Success! Client 3139271868990922739 send Put(8966907719052175756, 1341310424444164389)
+	Success! Client 3139271868990922739 send Put(7874282789606164087, 3091414814648915165)
+	Success! Client 3139271868990922739 send Put(5168842752386029040, 2954868182854617474)
+	Success! Client 3139271868990922739 send Put(2729832264327020533, 7520672105812085884)
+	Success! Client 3139271868990922739 send Put(2324404556830793034, 3927857604464424562)
+Initialize HashKV /var/tmp/824-501/skv-4721-basic-2,ID 4138301700107742966 
+	Pred: /var/tmp/824-501/skv-4721-basic-1 Succ:/var/tmp/824-501/skv-4721-basic-0
+
+[RPC] Successor /var/tmp/824-501/skv-4721-basic-0 preparing k/v pairs to new Server: /var/tmp/824-501/skv-4721-basic-2
+	Transfering (7874282789606164087, 3091414814648915165) shard 6 to new server /var/tmp/824-501/skv-4721-basic-2
+	Transfering (3505044670527352527, 1518947675490675164) shard 6 to new server /var/tmp/824-501/skv-4721-basic-2
+	Transfering (1931959332442411658, 5175732549253889441) shard 4 to new server /var/tmp/824-501/skv-4721-basic-2
+	Transfering (4236752630425850685, 1430861371294689027) shard 5 to new server /var/tmp/824-501/skv-4721-basic-2
+	Transfering (2729832264327020533, 7520672105812085884) shard 6 to new server /var/tmp/824-501/skv-4721-basic-2
+	Done scanning /var/tmp/824-501/skv-4721-basic-0 Database. Now update kv.pred to new server /var/tmp/824-501/skv-4721-basic-2
+	Add (2729832264327020533, 7520672105812085884) to /var/tmp/824-501/skv-4721-basic-2 DB
+	Add (7874282789606164087, 3091414814648915165) to /var/tmp/824-501/skv-4721-basic-2 DB
+	Add (3505044670527352527, 1518947675490675164) to /var/tmp/824-501/skv-4721-basic-2 DB
+	Add (1931959332442411658, 5175732549253889441) to /var/tmp/824-501/skv-4721-basic-2 DB
+	Add (4236752630425850685, 1430861371294689027) to /var/tmp/824-501/skv-4721-basic-2 DB
+	Add ({2511151759505815740 7874282789606164087}, 5) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Add ({2511151759505815740 2324404556830793034}, 9) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Add ({2511151759505815740 5961882901650070508}, 15) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Add ({2511151759505815740 2454555844678642032}, 4) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Add ({2511151759505815740 5104132458200192381}, 11) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Add ({2511151759505815740 8753391632062848549}, 1) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Add ({3139271868990922739 7874282789606164087}, 16) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Add ({3139271868990922739 1931959332442411658}, 14) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Add ({2511151759505815740 3505044670527352527}, 7) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Add ({3139271868990922739 1846594741936594345}, 9) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Add ({2511151759505815740 3152674699636597962}, 12) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Add ({2511151759505815740 4893430639698753863}, 16) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Add ({2511151759505815740 1931959332442411658}, 14) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Add ({2511151759505815740 8744483788123718559}, 3) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Add ({2511151759505815740 1846594741936594345}, 13) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Add ({3139271868990922739 3152674699636597962}, 1) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Add ({3139271868990922739 4236752630425850685}, 10) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Add ({3139271868990922739 8163198790876833724}, 0) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Add ({2511151759505815740 6953702870357627536}, 2) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Add ({3139271868990922739 2729832264327020533}, 18) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Add ({2511151759505815740 7899646871198389362}, 0) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Add ({2511151759505815740 8163198790876833724}, 10) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Add ({2511151759505815740 5992047186422441599}, 17) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Add ({3139271868990922739 4893430639698753863}, 3) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Add ({3139271868990922739 5992047186422441599}, 8) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Add ({2511151759505815740 2729832264327020533}, 8) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Add ({2511151759505815740 5168842752386029040}, 6) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Add ({2511151759505815740 8966907719052175756}, 18) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Add ({2511151759505815740 4236752630425850685}, 19) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Add ({3139271868990922739 3505044670527352527}, 7) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Range: (3, 8]
+	Active: true
+	Update server /var/tmp/824-501/skv-4721-basic-1 successor => /var/tmp/824-501/skv-4721-basic-2
+	Update server /var/tmp/824-501/skv-4721-basic-0 predecessor => /var/tmp/824-501/skv-4721-basic-2
+	Update server /var/tmp/824-501/skv-4721-basic-0 Range: (8, 14]
+2022/11/03 10:02:15 rpc.Register: method "HashCollision" has 2 input parameters; needs exactly three
+2022/11/03 10:02:15 rpc.Register: method "InitImpl" has 1 input parameters; needs exactly three
+2022/11/03 10:02:15 rpc.Register: method "IsActive" has 1 input parameters; needs exactly three
+2022/11/03 10:02:15 rpc.Register: method "KillImpl" has 1 input parameters; needs exactly three
+2022/11/03 10:02:15 rpc.Register: method "PackDBandClientHistory" has 1 input parameters; needs exactly three
+2022/11/03 10:02:15 rpc.Register: method "Setunreliable" has 2 input parameters; needs exactly three
+2022/11/03 10:02:15 rpc.Register: method "UpdateClientLatestReqID" has 2 input parameters; needs exactly three
+2022/11/03 10:02:15 rpc.Register: method "UpdateDB" has 2 input parameters; needs exactly three
+2022/11/03 10:02:15 rpc.Register: method "UpdatePredecessor" has 4 input parameters; needs exactly three
+2022/11/03 10:02:15 rpc.Register: method "UpdateSuccessor" has 4 input parameters; needs exactly three
+2022/11/03 10:02:15 rpc.Register: method "ValidForNewServer" has 4 input parameters; needs exactly three
+unexpected EOF
+unexpected EOF
+unexpected EOF
+	Get Success: client 1428563607075937295 Get(8163198790876833724) : 949106807538086164
+unexpected EOF
+unexpected EOF
+unexpected EOF
+	Get Success: client 3725386441317083353 Get(4893430639698753863) : 2110964770823186523
+	Get Success: client 231353084136268336 Get(3152674699636597962) : 4502998603871911412
+	Get Success: client 3039497336695002006 Get(5104132458200192381) : 3727053863590826641
+	Get Success: client 790628694317542288 Get(1846594741936594345) : 534042737455167594
+	Get Success: client 2634961527444269038 Get(2324404556830793034) : 3927857604464424562
+	Get Success: client 1100880189396975449 Get(7874282789606164087) : 3091414814648915165
+	Get Success: client 1154135461605545751 Get(8753391632062848549) : 2104714039950466573
+	Get Success: client 1017445720883998481 Get(5992047186422441599) : 7996254587863944223
+unexpected EOF
+	Get Success: client 685562743385802135 Get(8744483788123718559) : 7849433649748967041
+	Get Success: client 1712723464055868580 Get(5168842752386029040) : 2954868182854617474
+	Get Success: client 3048009055769238341 Get(1931959332442411658) : 5175732549253889441
+	Get Success: client 3286403934483858271 Get(3505044670527352527) : 1518947675490675164
+	Get Success: client 2064732834447264433 Get(2729832264327020533) : 7520672105812085884
+	Get Success: client 4108597430933050293 Get(5961882901650070508) : 6443534474227794993
+unexpected EOF
+	Get Success: client 2238092099488386299 Get(2454555844678642032) : 11908876815650231
+	Get Success: client 1348402753249413116 Get(6953702870357627536) : 1835266102988072218
+unexpected EOF
+	Get Success: client 3039619140099812928 Get(4236752630425850685) : 1430861371294689027
+unexpected EOF
+	Get Success: client 2848235194676038222 Get(7899646871198389362) : 8310855531485761109
+	Get Success: client 3110483312404475044 Get(8966907719052175756) : 1341310424444164389
+	Success! Client 895656901491305483 send Put(1846594741936594345, 3759899384338968096)
+	Success! Client 895656901491305483 send Put(4236752630425850685, 107981246950046209)
+	Success! Client 895656901491305483 send Put(7899646871198389362, 8965580709575467388)
+	Success! Client 895656901491305483 send Put(6953702870357627536, 4006579051712466676)
+	Success! Client 895656901491305483 send Put(5104132458200192381, 735422293485533813)
+write unix ->/var/tmp/824-501/skv-4721-basic-1: write: broken pipe
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+	Success! Client 895656901491305483 send Put(1931959332442411658, 3313587732538378775)
+	Success! Client 895656901491305483 send Put(7874282789606164087, 5888159731074571063)
+	Success! Client 895656901491305483 send Put(5168842752386029040, 3486090211471076832)
+	Success! Client 895656901491305483 send Put(2729832264327020533, 2028074668614899608)
+	Success! Client 895656901491305483 send Put(2324404556830793034, 7407978360241288634)
+	Success! Client 895656901491305483 send Put(8966907719052175756, 8726954019040038042)
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+	Success! Client 895656901491305483 send Put(5961882901650070508, 4054206092559567249)
+	Success! Client 895656901491305483 send Put(4893430639698753863, 192048926278051243)
+	Success! Client 895656901491305483 send Put(8753391632062848549, 505223353499774684)
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-1: write: broken pipe
+unexpected EOF
+	Success! Client 895656901491305483 send Put(8744483788123718559, 3511210701485630326)
+	Success! Client 895656901491305483 send Put(2454555844678642032, 2097270524634802064)
+	Success! Client 895656901491305483 send Put(3505044670527352527, 3183586332452592677)
+	Success! Client 895656901491305483 send Put(8163198790876833724, 4701633579365918240)
+	Success! Client 895656901491305483 send Put(3152674699636597962, 6709146752684036445)
+	Success! Client 895656901491305483 send Put(5992047186422441599, 7002027814102410720)
+unexpected EOF
+unexpected EOF
+unexpected EOF
+	Get Success: client 4440283975531954761 Get(5961882901650070508) : 4054206092559567249
+	Get Success: client 3588492094509914642 Get(1846594741936594345) : 3759899384338968096
+unexpected EOF
+	Get Success: client 1365611587372156891 Get(5992047186422441599) : 7002027814102410720
+unexpected EOF
+	Get Success: client 3365998670218079482 Get(6953702870357627536) : 4006579051712466676
+unexpected EOF
+	Get Success: client 2470334189380845355 Get(2729832264327020533) : 2028074668614899608
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+	Get Success: client 1052321719951158976 Get(4236752630425850685) : 107981246950046209
+	Get Success: client 2762613008347569189 Get(5104132458200192381) : 735422293485533813
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+	Get Success: client 1527907355303199028 Get(2324404556830793034) : 7407978360241288634
+unexpected EOF
+unexpected EOF
+	Get Success: client 4083262223352304219 Get(4893430639698753863) : 192048926278051243
+write unix ->/var/tmp/824-501/skv-4721-basic-1: write: broken pipe
+	Get Success: client 144474034565237798 Get(7899646871198389362) : 8965580709575467388
+	Get Success: client 3691948299988430680 Get(8163198790876833724) : 4701633579365918240
+	Get Success: client 4342496631327289332 Get(1931959332442411658) : 3313587732538378775
+	Get Success: client 2888823832927070502 Get(7874282789606164087) : 5888159731074571063
+	Get Success: client 4060974558620423997 Get(3505044670527352527) : 3183586332452592677
+	Get Success: client 1577375275884464374 Get(8966907719052175756) : 8726954019040038042
+	Get Success: client 4340723553762502606 Get(8753391632062848549) : 505223353499774684
+	Get Success: client 1094855907775599182 Get(3152674699636597962) : 6709146752684036445
+unexpected EOF
+unexpected EOF
+connection is shut down
+	Get Success: client 3051623449555647023 Get(8744483788123718559) : 3511210701485630326
+unexpected EOF
+unexpected EOF
+	Get Success: client 925356250738292776 Get(5168842752386029040) : 3486090211471076832
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-1: write: broken pipe
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+unexpected EOF
+	Get Success: client 3247381663835732644 Get(2454555844678642032) : 2097270524634802064
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-1: write: broken pipe
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-1: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-1: write: broken pipe
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-1: write: broken pipe
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-1: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+write unix ->/var/tmp/824-501/skv-4721-basic-1: write: broken pipe
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-1: write: broken pipe
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-1: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-1: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-1: write: broken pipe
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+  ... Passed
+Test: Basic leaves Unreliable...
+
+Server /var/tmp/824-501/skv-4721-basic-0 is leaving
+    Range: (8,14]  
+	pred: /var/tmp/824-501/skv-4721-basic-2
+	succ: /var/tmp/824-501/skv-4721-basic-1
+
+[RPC] /var/tmp/824-501/skv-4721-basic-1 get k/v pairs from dying predecessor /var/tmp/824-501/skv-4721-basic-0
+	Adding (8163198790876833724, 4701633579365918240) to /var/tmp/824-501/skv-4721-basic-1 database
+	Adding (1846594741936594345, 3759899384338968096) to /var/tmp/824-501/skv-4721-basic-1 database
+	Adding (5992047186422441599, 7002027814102410720) to /var/tmp/824-501/skv-4721-basic-1 database
+	Adding (3152674699636597962, 6709146752684036445) to /var/tmp/824-501/skv-4721-basic-1 database
+	Adding (4893430639698753863, 192048926278051243) to /var/tmp/824-501/skv-4721-basic-1 database
+	Adding ({3139271868990922739 3152674699636597962}, 1) to /var/tmp/824-501/skv-4721-basic-1 ClientLatestReqID
+	Adding ({895656901491305483 8163198790876833724}, 17) to /var/tmp/824-501/skv-4721-basic-1 ClientLatestReqID
+	Adding ({895656901491305483 4893430639698753863}, 12) to /var/tmp/824-501/skv-4721-basic-1 ClientLatestReqID
+	Adding ({3139271868990922739 4236752630425850685}, 10) to /var/tmp/824-501/skv-4721-basic-1 ClientLatestReqID
+	Adding ({2511151759505815740 6953702870357627536}, 2) to /var/tmp/824-501/skv-4721-basic-1 ClientLatestReqID
+	Adding ({3139271868990922739 2729832264327020533}, 18) to /var/tmp/824-501/skv-4721-basic-1 ClientLatestReqID
+	Adding ({2511151759505815740 2454555844678642032}, 4) to /var/tmp/824-501/skv-4721-basic-1 ClientLatestReqID
+	Adding ({2511151759505815740 5961882901650070508}, 15) to /var/tmp/824-501/skv-4721-basic-1 ClientLatestReqID
+	Adding ({2511151759505815740 8753391632062848549}, 1) to /var/tmp/824-501/skv-4721-basic-1 ClientLatestReqID
+	Adding ({2511151759505815740 1846594741936594345}, 13) to /var/tmp/824-501/skv-4721-basic-1 ClientLatestReqID
+	Adding ({2511151759505815740 5168842752386029040}, 6) to /var/tmp/824-501/skv-4721-basic-1 ClientLatestReqID
+	Adding ({2511151759505815740 5992047186422441599}, 17) to /var/tmp/824-501/skv-4721-basic-1 ClientLatestReqID
+	Adding ({2511151759505815740 7899646871198389362}, 0) to /var/tmp/824-501/skv-4721-basic-1 ClientLatestReqID
+	Adding ({2511151759505815740 4236752630425850685}, 19) to /var/tmp/824-501/skv-4721-basic-1 ClientLatestReqID
+	Adding ({3139271868990922739 3505044670527352527}, 7) to /var/tmp/824-501/skv-4721-basic-1 ClientLatestReqID
+	Adding ({2511151759505815740 3505044670527352527}, 7) to /var/tmp/824-501/skv-4721-basic-1 ClientLatestReqID
+	Adding ({3139271868990922739 8163198790876833724}, 0) to /var/tmp/824-501/skv-4721-basic-1 ClientLatestReqID
+	Adding ({895656901491305483 1846594741936594345}, 0) to /var/tmp/824-501/skv-4721-basic-1 ClientLatestReqID
+	Adding ({2511151759505815740 5104132458200192381}, 11) to /var/tmp/824-501/skv-4721-basic-1 ClientLatestReqID
+	Adding ({2511151759505815740 4893430639698753863}, 16) to /var/tmp/824-501/skv-4721-basic-1 ClientLatestReqID
+	Adding ({3139271868990922739 5992047186422441599}, 8) to /var/tmp/824-501/skv-4721-basic-1 ClientLatestReqID
+	Adding ({2511151759505815740 8744483788123718559}, 3) to /var/tmp/824-501/skv-4721-basic-1 ClientLatestReqID
+	Adding ({2511151759505815740 8966907719052175756}, 18) to /var/tmp/824-501/skv-4721-basic-1 ClientLatestReqID
+	Adding ({2511151759505815740 7874282789606164087}, 5) to /var/tmp/824-501/skv-4721-basic-1 ClientLatestReqID
+	Adding ({2511151759505815740 1931959332442411658}, 14) to /var/tmp/824-501/skv-4721-basic-1 ClientLatestReqID
+	Adding ({2511151759505815740 2324404556830793034}, 9) to /var/tmp/824-501/skv-4721-basic-1 ClientLatestReqID
+	Adding ({895656901491305483 3152674699636597962}, 18) to /var/tmp/824-501/skv-4721-basic-1 ClientLatestReqID
+	Adding ({3139271868990922739 7874282789606164087}, 16) to /var/tmp/824-501/skv-4721-basic-1 ClientLatestReqID
+	Adding ({895656901491305483 5992047186422441599}, 19) to /var/tmp/824-501/skv-4721-basic-1 ClientLatestReqID
+	Adding ({3139271868990922739 4893430639698753863}, 3) to /var/tmp/824-501/skv-4721-basic-1 ClientLatestReqID
+	Adding ({2511151759505815740 8163198790876833724}, 10) to /var/tmp/824-501/skv-4721-basic-1 ClientLatestReqID
+	Adding ({3139271868990922739 1846594741936594345}, 9) to /var/tmp/824-501/skv-4721-basic-1 ClientLatestReqID
+	Adding ({2511151759505815740 3152674699636597962}, 12) to /var/tmp/824-501/skv-4721-basic-1 ClientLatestReqID
+	Adding ({3139271868990922739 1931959332442411658}, 14) to /var/tmp/824-501/skv-4721-basic-1 ClientLatestReqID
+	Adding ({2511151759505815740 2729832264327020533}, 8) to /var/tmp/824-501/skv-4721-basic-1 ClientLatestReqID
+	Done copying /var/tmp/824-501/skv-4721-basic-1 Database & Client history. Now update kv.pred to be /var/tmp/824-501/skv-4721-basic-2
+	Update successors /var/tmp/824-501/skv-4721-basic-1 pred: /var/tmp/824-501/skv-4721-basic-2
+	    Range: (8,3]
+	Successfully passed /var/tmp/824-501/skv-4721-basic-0 (ID 1557701964540789140) databse to successor /var/tmp/824-501/skv-4721-basic-1 (ID:1955120657005854999) 
+	Update server /var/tmp/824-501/skv-4721-basic-2 successor => /var/tmp/824-501/skv-4721-basic-1
+unexpected EOF
+unexpected EOF
+	Get Success: client 1731399011413235659 Get(2729832264327020533) : 2028074668614899608
+unexpected EOF
+	Get Success: client 3845528894263293203 Get(1846594741936594345) : 3759899384338968096
+	Get Success: client 2235681388198413292 Get(3152674699636597962) : 6709146752684036445
+	Get Success: client 243272737596316757 Get(8966907719052175756) : 8726954019040038042
+	Get Success: client 3643835585140835889 Get(5992047186422441599) : 7002027814102410720
+	Get Success: client 1325154380547045418 Get(6953702870357627536) : 4006579051712466676
+	Get Success: client 584156882568910178 Get(5168842752386029040) : 3486090211471076832
+	Get Success: client 940839366551117951 Get(2454555844678642032) : 2097270524634802064
+	Get Success: client 2829191403592659283 Get(4236752630425850685) : 107981246950046209
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+	Get Success: client 2599216848238980037 Get(8744483788123718559) : 3511210701485630326
+	Get Success: client 1493600059386915543 Get(2324404556830793034) : 7407978360241288634
+unexpected EOF
+	Get Success: client 2782078414003554519 Get(8163198790876833724) : 4701633579365918240
+	Get Success: client 2943031044319680418 Get(1931959332442411658) : 3313587732538378775
+	Get Success: client 3439103179945667516 Get(7899646871198389362) : 8965580709575467388
+	Get Success: client 2008415611203589908 Get(5961882901650070508) : 4054206092559567249
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-1: write: broken pipe
+unexpected EOF
+	Get Success: client 2897874057609289236 Get(5992047186422441599) : 7002027814102410720
+unexpected EOF
+unexpected EOF
+unexpected EOF
+	Get Success: client 2800100504256686033 Get(3152674699636597962) : 6709146752684036445
+write unix ->/var/tmp/824-501/skv-4721-basic-1: write: broken pipe
+	Get Success: client 1685516732854553417 Get(4893430639698753863) : 192048926278051243
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+	Get Success: client 832700535698904910 Get(5104132458200192381) : 735422293485533813
+	Get Success: client 2374053137516570635 Get(4893430639698753863) : 192048926278051243
+	Get Success: client 2046514450567161600 Get(3505044670527352527) : 3183586332452592677
+	Get Success: client 1728469376290697768 Get(8753391632062848549) : 505223353499774684
+	Get Success: client 3963405677269667227 Get(7874282789606164087) : 5888159731074571063
+	Success! Client 2778733878293867177 send Put(8163198790876833724, 6330502732874769591)
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+	Get Success: client 4243505315669705497 Get(1846594741936594345) : 3759899384338968096
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+connection is shut down
+unexpected EOF
+	Get Success: client 305222669223571175 Get(8163198790876833724) : 6330502732874769591
+	Success! Client 2778733878293867177 send Put(3152674699636597962, 3572043621885472579)
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+connection is shut down
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+unexpected EOF
+	Success! Client 2778733878293867177 send Put(5961882901650070508, 8297074008697768515)
+unexpected EOF
+unexpected EOF
+unexpected EOF
+	Success! Client 2778733878293867177 send Put(4893430639698753863, 8955360504671560642)
+write unix ->/var/tmp/824-501/skv-4721-basic-1: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+write unix ->/var/tmp/824-501/skv-4721-basic-1: write: broken pipe
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+	Success! Client 2778733878293867177 send Put(8753391632062848549, 1891274159372421685)
+	Success! Client 2778733878293867177 send Put(8744483788123718559, 4797164576716429374)
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-1: write: broken pipe
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-1: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+	Success! Client 2778733878293867177 send Put(2454555844678642032, 8383281960761937000)
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-1: write: broken pipe
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+write unix ->/var/tmp/824-501/skv-4721-basic-1: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+	Success! Client 2778733878293867177 send Put(3505044670527352527, 8347816858812853030)
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+	Success! Client 2778733878293867177 send Put(5992047186422441599, 180101094971804624)
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-1: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-1: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+	Success! Client 2778733878293867177 send Put(1846594741936594345, 6275527112979290395)
+	Success! Client 2778733878293867177 send Put(4236752630425850685, 8927791176326361524)
+	Success! Client 2778733878293867177 send Put(7899646871198389362, 3429017941713717)
+	Success! Client 2778733878293867177 send Put(6953702870357627536, 1358421855370188774)
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+unexpected EOF
+	Success! Client 2778733878293867177 send Put(5104132458200192381, 8292764801502620659)
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+unexpected EOF
+unexpected EOF
+	Success! Client 2778733878293867177 send Put(1931959332442411658, 784107532346566729)
+	Success! Client 2778733878293867177 send Put(8966907719052175756, 5297277508357991980)
+	Success! Client 2778733878293867177 send Put(7874282789606164087, 638726182509615145)
+write unix ->/var/tmp/824-501/skv-4721-basic-1: write: broken pipe
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+	Success! Client 2778733878293867177 send Put(5168842752386029040, 7033949433420361510)
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+	Success! Client 2778733878293867177 send Put(2729832264327020533, 8139908294587187954)
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-1: write: broken pipe
+write unix ->/var/tmp/824-501/skv-4721-basic-1: write: broken pipe
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+	Success! Client 2778733878293867177 send Put(2324404556830793034, 6647501008564874190)
+
+Server /var/tmp/824-501/skv-4721-basic-1 is leaving
+    Range: (8,3]  
+	pred: /var/tmp/824-501/skv-4721-basic-2
+	succ: /var/tmp/824-501/skv-4721-basic-2
+
+[RPC] /var/tmp/824-501/skv-4721-basic-2 get k/v pairs from dying predecessor /var/tmp/824-501/skv-4721-basic-1
+	Adding (2454555844678642032, 8383281960761937000) to /var/tmp/824-501/skv-4721-basic-2 database
+	Adding (2324404556830793034, 6647501008564874190) to /var/tmp/824-501/skv-4721-basic-2 database
+	Adding (8744483788123718559, 4797164576716429374) to /var/tmp/824-501/skv-4721-basic-2 database
+	Adding (5104132458200192381, 8292764801502620659) to /var/tmp/824-501/skv-4721-basic-2 database
+	Adding (8163198790876833724, 6330502732874769591) to /var/tmp/824-501/skv-4721-basic-2 database
+	Adding (3152674699636597962, 3572043621885472579) to /var/tmp/824-501/skv-4721-basic-2 database
+	Adding (5168842752386029040, 7033949433420361510) to /var/tmp/824-501/skv-4721-basic-2 database
+	Adding (4893430639698753863, 8955360504671560642) to /var/tmp/824-501/skv-4721-basic-2 database
+	Adding (8753391632062848549, 1891274159372421685) to /var/tmp/824-501/skv-4721-basic-2 database
+	Adding (5961882901650070508, 8297074008697768515) to /var/tmp/824-501/skv-4721-basic-2 database
+	Adding (7899646871198389362, 3429017941713717) to /var/tmp/824-501/skv-4721-basic-2 database
+	Adding (5992047186422441599, 180101094971804624) to /var/tmp/824-501/skv-4721-basic-2 database
+	Adding (1846594741936594345, 6275527112979290395) to /var/tmp/824-501/skv-4721-basic-2 database
+	Adding (8966907719052175756, 5297277508357991980) to /var/tmp/824-501/skv-4721-basic-2 database
+	Adding (6953702870357627536, 1358421855370188774) to /var/tmp/824-501/skv-4721-basic-2 database
+	Adding ({3139271868990922739 7899646871198389362}, 11) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({3139271868990922739 8744483788123718559}, 5) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({3139271868990922739 6953702870357627536}, 12) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({3139271868990922739 5168842752386029040}, 17) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({2511151759505815740 7899646871198389362}, 0) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({2778733878293867177 3152674699636597962}, 1) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({895656901491305483 6953702870357627536}, 3) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({3139271868990922739 8163198790876833724}, 0) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({2778733878293867177 4893430639698753863}, 3) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({2778733878293867177 5104132458200192381}, 13) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({2511151759505815740 1846594741936594345}, 13) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({3139271868990922739 7874282789606164087}, 16) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({2511151759505815740 5961882901650070508}, 15) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({895656901491305483 2454555844678642032}, 15) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({2511151759505815740 3505044670527352527}, 7) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({3139271868990922739 2729832264327020533}, 18) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({895656901491305483 8163198790876833724}, 17) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({2511151759505815740 4893430639698753863}, 16) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({3139271868990922739 8966907719052175756}, 15) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({3139271868990922739 2324404556830793034}, 19) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({895656901491305483 8966907719052175756}, 10) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({2778733878293867177 7899646871198389362}, 11) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({2778733878293867177 2454555844678642032}, 6) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({3139271868990922739 4893430639698753863}, 3) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({3139271868990922739 8753391632062848549}, 4) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({2778733878293867177 8163198790876833724}, 0) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({895656901491305483 3152674699636597962}, 18) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({3139271868990922739 1931959332442411658}, 14) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({2778733878293867177 5961882901650070508}, 2) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({3139271868990922739 5961882901650070508}, 2) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({3139271868990922739 5992047186422441599}, 8) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({2511151759505815740 5104132458200192381}, 11) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({2511151759505815740 8966907719052175756}, 18) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({895656901491305483 8753391632062848549}, 13) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({2778733878293867177 8753391632062848549}, 4) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({2511151759505815740 4236752630425850685}, 19) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({895656901491305483 5992047186422441599}, 19) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({895656901491305483 2324404556830793034}, 9) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({2511151759505815740 6953702870357627536}, 2) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({2778733878293867177 5168842752386029040}, 17) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({2778733878293867177 2324404556830793034}, 19) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({2511151759505815740 5992047186422441599}, 17) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({2778733878293867177 8966907719052175756}, 15) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({3139271868990922739 5104132458200192381}, 13) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({2778733878293867177 6953702870357627536}, 12) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({3139271868990922739 1846594741936594345}, 9) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({2511151759505815740 5168842752386029040}, 6) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({2511151759505815740 1931959332442411658}, 14) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({2511151759505815740 2324404556830793034}, 9) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({895656901491305483 8744483788123718559}, 14) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({895656901491305483 7899646871198389362}, 2) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({3139271868990922739 3505044670527352527}, 7) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({3139271868990922739 3152674699636597962}, 1) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({895656901491305483 5168842752386029040}, 7) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({2778733878293867177 1846594741936594345}, 9) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({2778733878293867177 8744483788123718559}, 5) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({895656901491305483 1846594741936594345}, 0) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({2511151759505815740 2454555844678642032}, 4) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({2511151759505815740 8753391632062848549}, 1) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({895656901491305483 5104132458200192381}, 4) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({895656901491305483 5961882901650070508}, 11) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({2778733878293867177 5992047186422441599}, 8) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({2511151759505815740 8163198790876833724}, 10) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({2511151759505815740 3152674699636597962}, 12) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({3139271868990922739 2454555844678642032}, 6) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({2511151759505815740 7874282789606164087}, 5) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({2511151759505815740 2729832264327020533}, 8) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({895656901491305483 4893430639698753863}, 12) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({2511151759505815740 8744483788123718559}, 3) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Adding ({3139271868990922739 4236752630425850685}, 10) to /var/tmp/824-501/skv-4721-basic-2 ClientLatestReqID
+	Done copying /var/tmp/824-501/skv-4721-basic-2 Database & Client history. Now update kv.pred to be /var/tmp/824-501/skv-4721-basic-2
+	Update successors /var/tmp/824-501/skv-4721-basic-2 pred: /var/tmp/824-501/skv-4721-basic-2
+	    Range: (8,8]
+	Successfully passed /var/tmp/824-501/skv-4721-basic-1 (ID 1955120657005854999) databse to successor /var/tmp/824-501/skv-4721-basic-2 (ID:4138301700107742966) 
+unexpected EOF
+	Update server /var/tmp/824-501/skv-4721-basic-2 successor => /var/tmp/824-501/skv-4721-basic-2
+	RPC UpdateSucc failed
+unexpected EOF
+	RPC UpdateSucc failed
+	Update server /var/tmp/824-501/skv-4721-basic-2 successor => /var/tmp/824-501/skv-4721-basic-2
+	Update server /var/tmp/824-501/skv-4721-basic-2 successor => /var/tmp/824-501/skv-4721-basic-2
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+	Get Success: client 3063129679003975148 Get(5104132458200192381) : 8292764801502620659
+	Get Success: client 2210802694809256414 Get(8163198790876833724) : 6330502732874769591
+	Get Success: client 289859509155557238 Get(1846594741936594345) : 6275527112979290395
+	Get Success: client 3766817746104750619 Get(8744483788123718559) : 4797164576716429374
+	Get Success: client 2402521932562071020 Get(7874282789606164087) : 638726182509615145
+	Get Success: client 4041077733221059682 Get(7899646871198389362) : 3429017941713717
+	Get Success: client 687899640346678116 Get(5168842752386029040) : 7033949433420361510
+	Get Success: client 1545270013654848605 Get(2324404556830793034) : 6647501008564874190
+	Get Success: client 2700411813508019814 Get(1931959332442411658) : 784107532346566729
+	Get Success: client 1358900419138395867 Get(3152674699636597962) : 3572043621885472579
+	Get Success: client 2287272823562439663 Get(2454555844678642032) : 8383281960761937000
+	Get Success: client 1106415054919767066 Get(8966907719052175756) : 5297277508357991980
+	Get Success: client 2414128164523760265 Get(2729832264327020533) : 8139908294587187954
+	Get Success: client 4219410169217808921 Get(7899646871198389362) : 3429017941713717
+	Get Success: client 3672405427618204290 Get(6953702870357627536) : 1358421855370188774
+unexpected EOF
+	Get Success: client 2853953152352945554 Get(8753391632062848549) : 1891274159372421685
+	Get Success: client 722495276321067164 Get(2454555844678642032) : 8383281960761937000
+	Get Success: client 489798305689752636 Get(4893430639698753863) : 8955360504671560642
+unexpected EOF
+	Get Success: client 1331760628538071416 Get(3152674699636597962) : 3572043621885472579
+	Get Success: client 1447121149382828418 Get(5992047186422441599) : 180101094971804624
+	Get Success: client 3582333536290150666 Get(2324404556830793034) : 6647501008564874190
+	Get Success: client 3752272981171638072 Get(5168842752386029040) : 7033949433420361510
+unexpected EOF
+	Get Success: client 2904861821530007434 Get(5104132458200192381) : 8292764801502620659
+	Get Success: client 1778125005307999109 Get(8163198790876833724) : 6330502732874769591
+	Get Success: client 705350403629990301 Get(5961882901650070508) : 8297074008697768515
+unexpected EOF
+unexpected EOF
+	Get Success: client 3518983119782995066 Get(3505044670527352527) : 8347816858812853030
+	Get Success: client 689248150688196606 Get(8753391632062848549) : 1891274159372421685
+unexpected EOF
+unexpected EOF
+	Get Success: client 670760741939494639 Get(6953702870357627536) : 1358421855370188774
+	Get Success: client 237116270695820828 Get(8744483788123718559) : 4797164576716429374
+	Get Success: client 3675975809855472118 Get(1846594741936594345) : 6275527112979290395
+	Get Success: client 2543324719214674702 Get(8966907719052175756) : 5297277508357991980
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+	Get Success: client 3204334966988455050 Get(4236752630425850685) : 8927791176326361524
+	Get Success: client 2522306607542136932 Get(5961882901650070508) : 8297074008697768515
+	Get Success: client 4525648459948673206 Get(4893430639698753863) : 8955360504671560642
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+	Get Success: client 1415493447488169073 Get(5992047186422441599) : 180101094971804624
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+	Success! Client 3034716912812114007 send Put(8753391632062848549, 90996909367907599)
+	Success! Client 3034716912812114007 send Put(8744483788123718559, 3691087117087301255)
+	Success! Client 3034716912812114007 send Put(2454555844678642032, 7365360182203993783)
+	Success! Client 3034716912812114007 send Put(3505044670527352527, 4165996271748062305)
+	Success! Client 3034716912812114007 send Put(8163198790876833724, 188942477456890317)
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+	Success! Client 3034716912812114007 send Put(3152674699636597962, 4178027502299554690)
+	Success! Client 3034716912812114007 send Put(5961882901650070508, 7631360982906569736)
+	Success! Client 3034716912812114007 send Put(4893430639698753863, 5412399494725234746)
+unexpected EOF
+	Success! Client 3034716912812114007 send Put(5992047186422441599, 5722552404325315403)
+	Success! Client 3034716912812114007 send Put(1846594741936594345, 3151320540476981705)
+	Success! Client 3034716912812114007 send Put(4236752630425850685, 7935608548623324626)
+	Success! Client 3034716912812114007 send Put(7899646871198389362, 4026707892763327868)
+	Success! Client 3034716912812114007 send Put(6953702870357627536, 4938404005862921614)
+	Success! Client 3034716912812114007 send Put(5104132458200192381, 5874585341171178771)
+	Success! Client 3034716912812114007 send Put(1931959332442411658, 711768613478480395)
+unexpected EOF
+unexpected EOF
+	Success! Client 3034716912812114007 send Put(7874282789606164087, 6336540507181715723)
+	Success! Client 3034716912812114007 send Put(5168842752386029040, 1324592028668299895)
+unexpected EOF
+	Success! Client 3034716912812114007 send Put(2729832264327020533, 959218257593325011)
+	Success! Client 3034716912812114007 send Put(2324404556830793034, 6443788114559619933)
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+write unix ->/var/tmp/824-501/skv-4721-basic-2: write: broken pipe
+	Success! Client 3034716912812114007 send Put(8966907719052175756, 169168337238848923)
+  ... Passed
+PASS
+ok  	umich.edu/eecs491/proj4/hashkv	17.234s

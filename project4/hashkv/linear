@@ -1,0 +1,669 @@
+Test: Linearizability ...
+	Add server 0
+Initialize HashKV /var/tmp/824-501/skv-5065-basic-0,ID 2989451275120791483 
+	Pred: /var/tmp/824-501/skv-5065-basic-0 Succ:/var/tmp/824-501/skv-5065-basic-0
+	Range: (2, 2]
+	Active: true
+2022/11/03 10:04:33 rpc.Register: method "HashCollision" has 2 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "InitImpl" has 1 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "IsActive" has 1 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "KillImpl" has 1 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "PackDBandClientHistory" has 1 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "Setunreliable" has 2 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "UpdateClientLatestReqID" has 2 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "UpdateDB" has 2 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "UpdatePredecessor" has 4 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "UpdateSuccessor" has 4 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "ValidForNewServer" has 4 input parameters; needs exactly three
+
+===== Spawn client 0, Key: 7365063799450308359 =======
+	Add server 1
+Initialize HashKV /var/tmp/824-501/skv-5065-basic-1,ID 2179746087098976570 
+	Pred: /var/tmp/824-501/skv-5065-basic-0 Succ:/var/tmp/824-501/skv-5065-basic-0
+	Client 1454359726560940178 acquire mutex for key 7365063799450308359
+unexpected EOF
+
+[RPC] Successor /var/tmp/824-501/skv-5065-basic-0 preparing k/v pairs to new Server: /var/tmp/824-501/skv-5065-basic-1
+	Done scanning /var/tmp/824-501/skv-5065-basic-0 Database. Now update kv.pred to new server /var/tmp/824-501/skv-5065-basic-1
+	Range: (2, 5]
+	Active: true
+	Update server /var/tmp/824-501/skv-5065-basic-0 successor => /var/tmp/824-501/skv-5065-basic-1
+unexpected EOF
+	/var/tmp/824-501/skv-5065-basic-1 Fail from RPC UpdateSucc, retry...
+	Update server /var/tmp/824-501/skv-5065-basic-0 predecessor => /var/tmp/824-501/skv-5065-basic-1
+	Update server /var/tmp/824-501/skv-5065-basic-0 Range: (5, 2]
+	Update server /var/tmp/824-501/skv-5065-basic-0 predecessor => /var/tmp/824-501/skv-5065-basic-1
+	Update server /var/tmp/824-501/skv-5065-basic-0 Range: (5, 2]
+2022/11/03 10:04:33 rpc.Register: method "HashCollision" has 2 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "InitImpl" has 1 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "IsActive" has 1 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "KillImpl" has 1 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "PackDBandClientHistory" has 1 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "Setunreliable" has 2 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "UpdateClientLatestReqID" has 2 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "UpdateDB" has 2 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "UpdatePredecessor" has 4 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "UpdateSuccessor" has 4 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "ValidForNewServer" has 4 input parameters; needs exactly three
+
+===== Spawn client 1, Key: 2767779965179407404 =======
+	Add server 2
+Initialize HashKV /var/tmp/824-501/skv-5065-basic-2,ID 1266597815897787319 
+	Pred: /var/tmp/824-501/skv-5065-basic-1 Succ:/var/tmp/824-501/skv-5065-basic-0
+	Client 790577836302874109 acquire mutex for key 2767779965179407404
+unexpected EOF
+ RPC fail for /var/tmp/824-501/skv-5065-basic-2 to take data from succ /var/tmp/824-501/skv-5065-basic-0. Retry...
+
+[RPC] Successor /var/tmp/824-501/skv-5065-basic-0 preparing k/v pairs to new Server: /var/tmp/824-501/skv-5065-basic-2
+	Done scanning /var/tmp/824-501/skv-5065-basic-0 Database. Now update kv.pred to new server /var/tmp/824-501/skv-5065-basic-2
+	Add ({1454359726560940178 7365063799450308359}, 0) to /var/tmp/824-501/skv-5065-basic-2 ClientLatestReqID
+	Range: (5, 11]
+	Active: true
+	Update server /var/tmp/824-501/skv-5065-basic-1 successor => /var/tmp/824-501/skv-5065-basic-2
+unexpected EOF
+	/var/tmp/824-501/skv-5065-basic-2 Fail from RPC UpdateSucc, retry...
+	Update server /var/tmp/824-501/skv-5065-basic-0 predecessor => /var/tmp/824-501/skv-5065-basic-2
+	Update server /var/tmp/824-501/skv-5065-basic-0 Range: (11, 2]
+2022/11/03 10:04:33 rpc.Register: method "HashCollision" has 2 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "InitImpl" has 1 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "IsActive" has 1 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "KillImpl" has 1 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "PackDBandClientHistory" has 1 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "Setunreliable" has 2 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "UpdateClientLatestReqID" has 2 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "UpdateDB" has 2 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "UpdatePredecessor" has 4 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "UpdateSuccessor" has 4 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "ValidForNewServer" has 4 input parameters; needs exactly three
+
+===== Spawn client 2, Key: 113927641662051768 =======
+	Add server 3
+	Client 4355079417410794114 acquire mutex for key 113927641662051768
+Initialize HashKV /var/tmp/824-501/skv-5065-basic-3,ID 3267972018446368386 
+	Pred: /var/tmp/824-501/skv-5065-basic-2 Succ:/var/tmp/824-501/skv-5065-basic-0
+
+[RPC] Successor /var/tmp/824-501/skv-5065-basic-0 preparing k/v pairs to new Server: /var/tmp/824-501/skv-5065-basic-3
+	Done scanning /var/tmp/824-501/skv-5065-basic-0 Database. Now update kv.pred to new server /var/tmp/824-501/skv-5065-basic-3
+	Add ({1454359726560940178 7365063799450308359}, 0) to /var/tmp/824-501/skv-5065-basic-3 ClientLatestReqID
+	Range: (11, 1]
+	Active: true
+unexpected EOF
+	/var/tmp/824-501/skv-5065-basic-3 Fail from RPC UpdatePred, retry...
+write unix ->/var/tmp/824-501/skv-5065-basic-2: write: broken pipe
+	Update server /var/tmp/824-501/skv-5065-basic-2 successor => /var/tmp/824-501/skv-5065-basic-3
+	/var/tmp/824-501/skv-5065-basic-3 Fail from RPC UpdatePred, retry...
+	Update server /var/tmp/824-501/skv-5065-basic-2 successor => /var/tmp/824-501/skv-5065-basic-3
+	Update server /var/tmp/824-501/skv-5065-basic-0 predecessor => /var/tmp/824-501/skv-5065-basic-3
+	Update server /var/tmp/824-501/skv-5065-basic-0 Range: (1, 2]
+2022/11/03 10:04:33 rpc.Register: method "HashCollision" has 2 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "InitImpl" has 1 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "IsActive" has 1 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "KillImpl" has 1 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "PackDBandClientHistory" has 1 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "Setunreliable" has 2 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "UpdateClientLatestReqID" has 2 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "UpdateDB" has 2 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "UpdatePredecessor" has 4 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "UpdateSuccessor" has 4 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "ValidForNewServer" has 4 input parameters; needs exactly three
+
+===== Spawn client 3, Key: 3887508618385301599 =======
+	Add server 4
+Initialize HashKV /var/tmp/824-501/skv-5065-basic-4,ID 467658174558657329 
+	Pred: /var/tmp/824-501/skv-5065-basic-1 Succ:/var/tmp/824-501/skv-5065-basic-2
+	Client 381901641437837655 acquire mutex for key 3887508618385301599
+
+[RPC] Successor /var/tmp/824-501/skv-5065-basic-2 preparing k/v pairs to new Server: /var/tmp/824-501/skv-5065-basic-4
+	Done scanning /var/tmp/824-501/skv-5065-basic-2 Database. Now update kv.pred to new server /var/tmp/824-501/skv-5065-basic-4
+	Add ({1454359726560940178 7365063799450308359}, 0) to /var/tmp/824-501/skv-5065-basic-4 ClientLatestReqID
+	Range: (5, 10]
+	Active: true
+	Success! Client 381901641437837655 send Put(3887508618385301599, 2437404405937393425)
+	Client 381901641437837655 try Get(3887508618385301599) : 
+	Update server /var/tmp/824-501/skv-5065-basic-1 successor => /var/tmp/824-501/skv-5065-basic-4
+unexpected EOF
+	/var/tmp/824-501/skv-5065-basic-4 Fail from RPC UpdateSucc, retry...
+	Update server /var/tmp/824-501/skv-5065-basic-2 predecessor => /var/tmp/824-501/skv-5065-basic-4
+	Update server /var/tmp/824-501/skv-5065-basic-2 Range: (10, 11]
+unexpected EOF
+	/var/tmp/824-501/skv-5065-basic-4 Fail from RPC UpdateSucc, retry...
+	Update server /var/tmp/824-501/skv-5065-basic-2 predecessor => /var/tmp/824-501/skv-5065-basic-4
+	Update server /var/tmp/824-501/skv-5065-basic-2 Range: (10, 11]
+unexpected EOF
+	/var/tmp/824-501/skv-5065-basic-4 Fail from RPC UpdateSucc, retry...
+	Update server /var/tmp/824-501/skv-5065-basic-2 predecessor => /var/tmp/824-501/skv-5065-basic-4
+	Update server /var/tmp/824-501/skv-5065-basic-2 Range: (10, 11]
+2022/11/03 10:04:33 rpc.Register: method "HashCollision" has 2 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "InitImpl" has 1 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "IsActive" has 1 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "KillImpl" has 1 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "PackDBandClientHistory" has 1 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "Setunreliable" has 2 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "UpdateClientLatestReqID" has 2 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "UpdateDB" has 2 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "UpdatePredecessor" has 4 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "UpdateSuccessor" has 4 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "ValidForNewServer" has 4 input parameters; needs exactly three
+
+===== Spawn client 4, Key: 1761356625155383106 =======
+	Add server 5
+	Client 4551588405941188903 acquire mutex for key 1761356625155383106
+Initialize HashKV /var/tmp/824-501/skv-5065-basic-5,ID 3506918031191299861 
+	Pred: /var/tmp/824-501/skv-5065-basic-2 Succ:/var/tmp/824-501/skv-5065-basic-3
+unexpected EOF
+ RPC fail for /var/tmp/824-501/skv-5065-basic-5 to take data from succ /var/tmp/824-501/skv-5065-basic-3. Retry...
+
+[RPC] Successor /var/tmp/824-501/skv-5065-basic-3 preparing k/v pairs to new Server: /var/tmp/824-501/skv-5065-basic-5
+	Done scanning /var/tmp/824-501/skv-5065-basic-3 Database. Now update kv.pred to new server /var/tmp/824-501/skv-5065-basic-5
+
+[RPC] Successor /var/tmp/824-501/skv-5065-basic-3 preparing k/v pairs to new Server: /var/tmp/824-501/skv-5065-basic-5
+	Done scanning /var/tmp/824-501/skv-5065-basic-3 Database. Now update kv.pred to new server /var/tmp/824-501/skv-5065-basic-5
+	Add ({1454359726560940178 7365063799450308359}, 0) to /var/tmp/824-501/skv-5065-basic-5 ClientLatestReqID
+	Range: (11, 14]
+	Active: true
+	Update server /var/tmp/824-501/skv-5065-basic-2 successor => /var/tmp/824-501/skv-5065-basic-5
+	Update server /var/tmp/824-501/skv-5065-basic-3 predecessor => /var/tmp/824-501/skv-5065-basic-5
+	Update server /var/tmp/824-501/skv-5065-basic-3 Range: (14, 1]
+2022/11/03 10:04:33 rpc.Register: method "HashCollision" has 2 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "InitImpl" has 1 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "IsActive" has 1 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "KillImpl" has 1 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "PackDBandClientHistory" has 1 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "Setunreliable" has 2 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "UpdateClientLatestReqID" has 2 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "UpdateDB" has 2 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "UpdatePredecessor" has 4 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "UpdateSuccessor" has 4 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "ValidForNewServer" has 4 input parameters; needs exactly three
+
+===== Spawn client 5, Key: 2426518141746492179 =======
+	Add server 6
+Initialize HashKV /var/tmp/824-501/skv-5065-basic-6,ID 2116742990489367654 
+	Pred: /var/tmp/824-501/skv-5065-basic-0 Succ:/var/tmp/824-501/skv-5065-basic-1
+	Client 4483530735385058926 acquire mutex for key 2426518141746492179
+
+[RPC] Successor /var/tmp/824-501/skv-5065-basic-1 preparing k/v pairs to new Server: /var/tmp/824-501/skv-5065-basic-6
+	Done scanning /var/tmp/824-501/skv-5065-basic-1 Database. Now update kv.pred to new server /var/tmp/824-501/skv-5065-basic-6
+	Add ({381901641437837655 3887508618385301599}, 0) to /var/tmp/824-501/skv-5065-basic-6 ClientLatestReqID
+	Range: (2, 3]
+	Active: true
+	Update server /var/tmp/824-501/skv-5065-basic-0 successor => /var/tmp/824-501/skv-5065-basic-6
+	Update server /var/tmp/824-501/skv-5065-basic-1 predecessor => /var/tmp/824-501/skv-5065-basic-6
+	Update server /var/tmp/824-501/skv-5065-basic-1 Range: (3, 5]
+2022/11/03 10:04:33 rpc.Register: method "HashCollision" has 2 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "InitImpl" has 1 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "IsActive" has 1 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "KillImpl" has 1 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "PackDBandClientHistory" has 1 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "Setunreliable" has 2 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "UpdateClientLatestReqID" has 2 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "UpdateDB" has 2 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "UpdatePredecessor" has 4 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "UpdateSuccessor" has 4 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "ValidForNewServer" has 4 input parameters; needs exactly three
+
+===== Spawn client 6, Key: 2475297035739449979 =======
+	Add server 7
+	Client 4420802174728432476 acquire mutex for key 2475297035739449979
+Initialize HashKV /var/tmp/824-501/skv-5065-basic-7,ID 3175654954928366722 
+	Pred: /var/tmp/824-501/skv-5065-basic-0 Succ:/var/tmp/824-501/skv-5065-basic-6
+write unix ->/var/tmp/824-501/skv-5065-basic-0: write: broken pipe
+	Range: (2, 2]
+	Active: false
+	Update server /var/tmp/824-501/skv-5065-basic-0 successor => /var/tmp/824-501/skv-5065-basic-7
+	Update server /var/tmp/824-501/skv-5065-basic-6 predecessor => /var/tmp/824-501/skv-5065-basic-7
+	Update server /var/tmp/824-501/skv-5065-basic-6 Range: (2, 3]
+2022/11/03 10:04:33 rpc.Register: method "HashCollision" has 2 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "InitImpl" has 1 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "IsActive" has 1 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "KillImpl" has 1 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "PackDBandClientHistory" has 1 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "Setunreliable" has 2 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "UpdateClientLatestReqID" has 2 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "UpdateDB" has 2 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "UpdatePredecessor" has 4 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "UpdateSuccessor" has 4 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "ValidForNewServer" has 4 input parameters; needs exactly three
+
+===== Spawn client 7, Key: 6114323289908404682 =======
+	Add server 8
+Initialize HashKV /var/tmp/824-501/skv-5065-basic-8,ID 1765942470208024860 
+	Pred: /var/tmp/824-501/skv-5065-basic-5 Succ:/var/tmp/824-501/skv-5065-basic-3
+	server /var/tmp/824-501/skv-5065-basic-8 is active with ID:1765942470208024860
+	Transfering DB from its successor /var/tmp/824-501/skv-5065-basic-3
+		(succ /var/tmp/824-501/skv-5065-basic-3 set to inactive
+	Add ({1454359726560940178 7365063799450308359}, 0) to /var/tmp/824-501/skv-5065-basic-8 ClientLatestReqID
+	Range: (14, 1]
+	Active: true
+	Update server /var/tmp/824-501/skv-5065-basic-5 successor => /var/tmp/824-501/skv-5065-basic-8
+	Update server /var/tmp/824-501/skv-5065-basic-3 predecessor => /var/tmp/824-501/skv-5065-basic-8
+	Update server /var/tmp/824-501/skv-5065-basic-3 Range: (1, 1]
+2022/11/03 10:04:33 rpc.Register: method "HashCollision" has 2 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "InitImpl" has 1 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "IsActive" has 1 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "KillImpl" has 1 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "PackDBandClientHistory" has 1 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "Setunreliable" has 2 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "UpdateClientLatestReqID" has 2 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "UpdateDB" has 2 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "UpdatePredecessor" has 4 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "UpdateSuccessor" has 4 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "ValidForNewServer" has 4 input parameters; needs exactly three
+	Client 4175204710430592420 acquire mutex for key 6114323289908404682
+
+===== Spawn client 8, Key: 2800920084374497066 =======
+	Add server 9
+	Client 3335538239394306970 acquire mutex for key 2800920084374497066
+Initialize HashKV /var/tmp/824-501/skv-5065-basic-9,ID 3173192289968543613 
+	Pred: /var/tmp/824-501/skv-5065-basic-2 Succ:/var/tmp/824-501/skv-5065-basic-5
+	server /var/tmp/824-501/skv-5065-basic-9 is active with ID:3173192289968543613
+	Transfering DB from its successor /var/tmp/824-501/skv-5065-basic-5
+		(succ /var/tmp/824-501/skv-5065-basic-5 set to inactive
+write unix ->/var/tmp/824-501/skv-5065-basic-5: write: broken pipe
+unexpected EOF
+ RPC fail for /var/tmp/824-501/skv-5065-basic-9 to take data from succ /var/tmp/824-501/skv-5065-basic-5
+unexpected EOF
+ RPC fail for /var/tmp/824-501/skv-5065-basic-9 to take data from succ /var/tmp/824-501/skv-5065-basic-5
+unexpected EOF
+ RPC fail for /var/tmp/824-501/skv-5065-basic-9 to take data from succ /var/tmp/824-501/skv-5065-basic-5
+	Add ({1454359726560940178 7365063799450308359}, 0) to /var/tmp/824-501/skv-5065-basic-9 ClientLatestReqID
+	Range: (11, 14]
+	Active: true
+unexpected EOF
+	/var/tmp/824-501/skv-5065-basic-9 Fail from RPC UpdatePred, retry...
+	Update server /var/tmp/824-501/skv-5065-basic-2 successor => /var/tmp/824-501/skv-5065-basic-9
+unexpected EOF
+	/var/tmp/824-501/skv-5065-basic-9 Fail from RPC UpdatePred, retry...
+	Update server /var/tmp/824-501/skv-5065-basic-2 successor => /var/tmp/824-501/skv-5065-basic-9
+	Update server /var/tmp/824-501/skv-5065-basic-5 predecessor => /var/tmp/824-501/skv-5065-basic-9
+	Update server /var/tmp/824-501/skv-5065-basic-5 Range: (14, 14]
+2022/11/03 10:04:33 rpc.Register: method "HashCollision" has 2 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "InitImpl" has 1 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "IsActive" has 1 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "KillImpl" has 1 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "PackDBandClientHistory" has 1 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "Setunreliable" has 2 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "UpdateClientLatestReqID" has 2 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "UpdateDB" has 2 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "UpdatePredecessor" has 4 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "UpdateSuccessor" has 4 input parameters; needs exactly three
+2022/11/03 10:04:33 rpc.Register: method "ValidForNewServer" has 4 input parameters; needs exactly three
+
+===== Spawn client 9, Key: 6299821701634415682 =======
+	Client 2255350061325316059 acquire mutex for key 6299821701634415682
+Done spawning go routines. Now wait for success ......
+write unix ->/var/tmp/824-501/skv-5065-basic-4: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+	Success! Client 4551588405941188903 send Put(1761356625155383106, 2558711445800675593)
+	Client 4551588405941188903 try Get(1761356625155383106) : 
+	Success! Client 4483530735385058926 send Put(2426518141746492179, 7091245967576870639)
+	Client 4483530735385058926 try Get(2426518141746492179) : 
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-5065-basic-6: write: broken pipe
+write unix ->/var/tmp/824-501/skv-5065-basic-5: write: broken pipe
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-5065-basic-5: write: broken pipe
+write unix ->/var/tmp/824-501/skv-5065-basic-8: write: broken pipe
+unexpected EOF
+	Get Success: client 4551588405941188903 Get(1761356625155383106) : 2558711445800675593
+		Client 4551588405941188903 release lock for key 1761356625155383106
+Get value: Put 1761356625155383106,2558711445800675593
+unexpected EOF
+unexpected EOF
+unexpected EOF
+	Success! Client 790577836302874109 send Put(2767779965179407404, 5568325605022938570)
+	Client 790577836302874109 try Get(2767779965179407404) : 
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-5065-basic-5: write: broken pipe
+	Get Success: client 4483530735385058926 Get(2426518141746492179) : 7091245967576870639
+		Client 4483530735385058926 release lock for key 2426518141746492179
+Get value: Put 2426518141746492179,7091245967576870639
+	Get Success: client 381901641437837655 Get(3887508618385301599) : 2437404405937393425
+		Client 381901641437837655 release lock for key 3887508618385301599
+Get value: Put 3887508618385301599,2437404405937393425
+	Get Success: client 790577836302874109 Get(2767779965179407404) : 5568325605022938570
+		Client 790577836302874109 release lock for key 2767779965179407404
+Get value: Put 2767779965179407404,5568325605022938570
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-5065-basic-7: write: broken pipe
+write unix ->/var/tmp/824-501/skv-5065-basic-1: write: broken pipe
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-5065-basic-4: write: broken pipe
+	Success! Client 4175204710430592420 send Put(6114323289908404682, 8754231586378969301)
+	Client 4175204710430592420 try Get(6114323289908404682) : 
+write unix ->/var/tmp/824-501/skv-5065-basic-9: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+	Success! Client 1454359726560940178 send Put(7365063799450308359, 3102806337459305377)
+	Client 1454359726560940178 try Get(7365063799450308359) : 
+write unix ->/var/tmp/824-501/skv-5065-basic-4: write: broken pipe
+	Success! Client 4355079417410794114 send Put(113927641662051768, 3237799431911920737)
+	Client 4355079417410794114 try Get(113927641662051768) : 
+unexpected EOF
+unexpected EOF
+unexpected EOF
+	Get Success: client 4355079417410794114 Get(113927641662051768) : 3237799431911920737
+		Client 4355079417410794114 release lock for key 113927641662051768
+Get value: Put 113927641662051768,3237799431911920737
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-5065-basic-4: write: broken pipe
+	Get Success: client 4175204710430592420 Get(6114323289908404682) : 8754231586378969301
+		Client 4175204710430592420 release lock for key 6114323289908404682
+Get value: Put 6114323289908404682,8754231586378969301
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-5065-basic-9: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-5065-basic-4: write: broken pipe
+unexpected EOF
+	Get Success: client 1454359726560940178 Get(7365063799450308359) : 3102806337459305377
+		Client 1454359726560940178 release lock for key 7365063799450308359
+Get value: Put 7365063799450308359,3102806337459305377
+unexpected EOF
+	Success! Client 3335538239394306970 send Put(2800920084374497066, 2854939263026871742)
+	Client 3335538239394306970 try Get(2800920084374497066) : 
+write unix ->/var/tmp/824-501/skv-5065-basic-2: write: broken pipe
+unexpected EOF
+	Get Success: client 3335538239394306970 Get(2800920084374497066) : 2854939263026871742
+		Client 3335538239394306970 release lock for key 2800920084374497066
+Get value: Put 2800920084374497066,2854939263026871742
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-5065-basic-5: write: broken pipe
+unexpected EOF
+unexpected EOF
+	Success! Client 2255350061325316059 send Put(6299821701634415682, 6380463623461988563)
+	Client 2255350061325316059 try Get(6299821701634415682) : 
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-5065-basic-4: write: broken pipe
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-5065-basic-8: write: broken pipe
+write unix ->/var/tmp/824-501/skv-5065-basic-9: write: broken pipe
+write unix ->/var/tmp/824-501/skv-5065-basic-9: write: broken pipe
+write unix ->/var/tmp/824-501/skv-5065-basic-5: write: broken pipe
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-5065-basic-9: write: broken pipe
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-5065-basic-1: write: broken pipe
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-5065-basic-7: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-5065-basic-2: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-5065-basic-8: write: broken pipe
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-5065-basic-5: write: broken pipe
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-5065-basic-9: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+	Success! Client 4420802174728432476 send Put(2475297035739449979, 8705463527341722658)
+	Client 4420802174728432476 try Get(2475297035739449979) : 
+write unix ->/var/tmp/824-501/skv-5065-basic-4: write: broken pipe
+	Get Success: client 2255350061325316059 Get(6299821701634415682) : 6380463623461988563
+		Client 2255350061325316059 release lock for key 6299821701634415682
+Get value: Put 6299821701634415682,6380463623461988563
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-5065-basic-2: write: broken pipe
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-5065-basic-4: write: broken pipe
+write unix ->/var/tmp/824-501/skv-5065-basic-4: write: broken pipe
+unexpected EOF
+unexpected EOF
+	Get Success: client 4420802174728432476 Get(2475297035739449979) : 8705463527341722658
+		Client 4420802174728432476 release lock for key 2475297035739449979
+Get value: Put 2475297035739449979,8705463527341722658
+Test leaves ...
+
+Server /var/tmp/824-501/skv-5065-basic-0 is leaving
+    Range: (1,2]  
+	pred: /var/tmp/824-501/skv-5065-basic-3
+	succ: /var/tmp/824-501/skv-5065-basic-7
+
+[RPC] /var/tmp/824-501/skv-5065-basic-7 get k/v pairs from dying predecessor /var/tmp/824-501/skv-5065-basic-0
+	Adding (6114323289908404682, 8754231586378969301) to /var/tmp/824-501/skv-5065-basic-7 database
+	Adding ({4175204710430592420 6114323289908404682}, 0) to /var/tmp/824-501/skv-5065-basic-7 ClientLatestReqID
+	Adding ({1454359726560940178 7365063799450308359}, 0) to /var/tmp/824-501/skv-5065-basic-7 ClientLatestReqID
+	Done copying /var/tmp/824-501/skv-5065-basic-7 Database & Client history. Now update kv.pred to be /var/tmp/824-501/skv-5065-basic-3
+	Update successors /var/tmp/824-501/skv-5065-basic-7 pred: /var/tmp/824-501/skv-5065-basic-3
+	    Range: (1,2]
+	Successfully passed /var/tmp/824-501/skv-5065-basic-0 (ID 2989451275120791483) databse to successor /var/tmp/824-501/skv-5065-basic-7 (ID:3175654954928366722) 
+	Update server /var/tmp/824-501/skv-5065-basic-3 successor => /var/tmp/824-501/skv-5065-basic-7
+	Test Get(7365063799450308359) 
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-5065-basic-6: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-5065-basic-5: write: broken pipe
+unexpected EOF
+unexpected EOF
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-5065-basic-5: write: broken pipe
+unexpected EOF
+	Get Success: client 4355079417410794114 Get(7365063799450308359) : 3102806337459305377
+		Correct! Get(7365063799450308359) returns 3102806337459305377
+
+Server /var/tmp/824-501/skv-5065-basic-1 is leaving
+    Range: (3,5]  
+	pred: /var/tmp/824-501/skv-5065-basic-6
+	succ: /var/tmp/824-501/skv-5065-basic-4
+
+[RPC] /var/tmp/824-501/skv-5065-basic-4 get k/v pairs from dying predecessor /var/tmp/824-501/skv-5065-basic-1
+	Adding (7365063799450308359, 3102806337459305377) to /var/tmp/824-501/skv-5065-basic-4 database
+	Adding (113927641662051768, 3237799431911920737) to /var/tmp/824-501/skv-5065-basic-4 database
+	Adding (3887508618385301599, 2437404405937393425) to /var/tmp/824-501/skv-5065-basic-4 database
+	Adding ({381901641437837655 3887508618385301599}, 0) to /var/tmp/824-501/skv-5065-basic-4 ClientLatestReqID
+	Adding ({1454359726560940178 7365063799450308359}, 0) to /var/tmp/824-501/skv-5065-basic-4 ClientLatestReqID
+	Adding ({4355079417410794114 113927641662051768}, 0) to /var/tmp/824-501/skv-5065-basic-4 ClientLatestReqID
+	Done copying /var/tmp/824-501/skv-5065-basic-4 Database & Client history. Now update kv.pred to be /var/tmp/824-501/skv-5065-basic-6
+	Update successors /var/tmp/824-501/skv-5065-basic-4 pred: /var/tmp/824-501/skv-5065-basic-6
+	    Range: (3,10]
+	Successfully passed /var/tmp/824-501/skv-5065-basic-1 (ID 2179746087098976570) databse to successor /var/tmp/824-501/skv-5065-basic-4 (ID:467658174558657329) 
+	Update server /var/tmp/824-501/skv-5065-basic-6 successor => /var/tmp/824-501/skv-5065-basic-4
+	Test Get(7365063799450308359) 
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+unexpected EOF
+	Get Success: client 4551588405941188903 Get(7365063799450308359) : 3102806337459305377
+		Correct! Get(7365063799450308359) returns 3102806337459305377
+
+Server /var/tmp/824-501/skv-5065-basic-2 is leaving
+    Range: (10,11]  
+	pred: /var/tmp/824-501/skv-5065-basic-4
+	succ: /var/tmp/824-501/skv-5065-basic-9
+
+[RPC] /var/tmp/824-501/skv-5065-basic-9 get k/v pairs from dying predecessor /var/tmp/824-501/skv-5065-basic-2
+	Adding ({1454359726560940178 7365063799450308359}, 0) to /var/tmp/824-501/skv-5065-basic-9 ClientLatestReqID
+	Done copying /var/tmp/824-501/skv-5065-basic-9 Database & Client history. Now update kv.pred to be /var/tmp/824-501/skv-5065-basic-4
+	Update successors /var/tmp/824-501/skv-5065-basic-9 pred: /var/tmp/824-501/skv-5065-basic-4
+	    Range: (10,14]
+	Successfully passed /var/tmp/824-501/skv-5065-basic-2 (ID 1266597815897787319) databse to successor /var/tmp/824-501/skv-5065-basic-9 (ID:3173192289968543613) 
+unexpected EOF
+	RPC UpdateSucc failed
+	Update server /var/tmp/824-501/skv-5065-basic-4 successor => /var/tmp/824-501/skv-5065-basic-9
+	Update server /var/tmp/824-501/skv-5065-basic-4 successor => /var/tmp/824-501/skv-5065-basic-9
+	Test Get(7365063799450308359) 
+unexpected EOF
+write unix ->/var/tmp/824-501/skv-5065-basic-6: write: broken pipe
+write unix ->/var/tmp/824-501/skv-5065-basic-4: write: broken pipe
+unexpected EOF
+	Get Success: client 4175204710430592420 Get(7365063799450308359) : 3102806337459305377
+		Correct! Get(7365063799450308359) returns 3102806337459305377
+
+Server /var/tmp/824-501/skv-5065-basic-3 is leaving
+    Range: (1,1]  
+	pred: /var/tmp/824-501/skv-5065-basic-8
+	succ: /var/tmp/824-501/skv-5065-basic-7
+
+[RPC] /var/tmp/824-501/skv-5065-basic-7 get k/v pairs from dying predecessor /var/tmp/824-501/skv-5065-basic-3
+	Adding ({1454359726560940178 7365063799450308359}, 0) to /var/tmp/824-501/skv-5065-basic-7 ClientLatestReqID
+	Done copying /var/tmp/824-501/skv-5065-basic-7 Database & Client history. Now update kv.pred to be /var/tmp/824-501/skv-5065-basic-8
+	Update successors /var/tmp/824-501/skv-5065-basic-7 pred: /var/tmp/824-501/skv-5065-basic-8
+	    Range: (1,2]
+	Successfully passed /var/tmp/824-501/skv-5065-basic-3 (ID 3267972018446368386) databse to successor /var/tmp/824-501/skv-5065-basic-7 (ID:3175654954928366722) 
+write unix ->/var/tmp/824-501/skv-5065-basic-8: write: broken pipe
+	RPC UpdateSucc failed
+unexpected EOF
+	RPC UpdateSucc failed
+	Update server /var/tmp/824-501/skv-5065-basic-8 successor => /var/tmp/824-501/skv-5065-basic-7
+	Update server /var/tmp/824-501/skv-5065-basic-8 successor => /var/tmp/824-501/skv-5065-basic-7
+	Test Get(7365063799450308359) 
+unexpected EOF
+	Get Success: client 4420802174728432476 Get(7365063799450308359) : 3102806337459305377
+		Correct! Get(7365063799450308359) returns 3102806337459305377
+
+Server /var/tmp/824-501/skv-5065-basic-4 is leaving
+    Range: (3,10]  
+	pred: /var/tmp/824-501/skv-5065-basic-6
+	succ: /var/tmp/824-501/skv-5065-basic-9
+
+[RPC] /var/tmp/824-501/skv-5065-basic-9 get k/v pairs from dying predecessor /var/tmp/824-501/skv-5065-basic-4
+	Adding (1761356625155383106, 2558711445800675593) to /var/tmp/824-501/skv-5065-basic-9 database
+	Adding (2800920084374497066, 2854939263026871742) to /var/tmp/824-501/skv-5065-basic-9 database
+	Adding (2475297035739449979, 8705463527341722658) to /var/tmp/824-501/skv-5065-basic-9 database
+	Adding (7365063799450308359, 3102806337459305377) to /var/tmp/824-501/skv-5065-basic-9 database
+	Adding (113927641662051768, 3237799431911920737) to /var/tmp/824-501/skv-5065-basic-9 database
+	Adding (3887508618385301599, 2437404405937393425) to /var/tmp/824-501/skv-5065-basic-9 database
+	Adding ({4551588405941188903 1761356625155383106}, 0) to /var/tmp/824-501/skv-5065-basic-9 ClientLatestReqID
+	Adding ({3335538239394306970 2800920084374497066}, 0) to /var/tmp/824-501/skv-5065-basic-9 ClientLatestReqID
+	Adding ({4420802174728432476 2475297035739449979}, 0) to /var/tmp/824-501/skv-5065-basic-9 ClientLatestReqID
+	Adding ({381901641437837655 3887508618385301599}, 0) to /var/tmp/824-501/skv-5065-basic-9 ClientLatestReqID
+	Adding ({4355079417410794114 113927641662051768}, 0) to /var/tmp/824-501/skv-5065-basic-9 ClientLatestReqID
+	Adding ({1454359726560940178 7365063799450308359}, 0) to /var/tmp/824-501/skv-5065-basic-9 ClientLatestReqID
+	Done copying /var/tmp/824-501/skv-5065-basic-9 Database & Client history. Now update kv.pred to be /var/tmp/824-501/skv-5065-basic-6
+	Update successors /var/tmp/824-501/skv-5065-basic-9 pred: /var/tmp/824-501/skv-5065-basic-6
+	    Range: (3,14]
+	Successfully passed /var/tmp/824-501/skv-5065-basic-4 (ID 467658174558657329) databse to successor /var/tmp/824-501/skv-5065-basic-9 (ID:3173192289968543613) 
+	Update server /var/tmp/824-501/skv-5065-basic-6 successor => /var/tmp/824-501/skv-5065-basic-9
+	Test Get(7365063799450308359) 
+write unix ->/var/tmp/824-501/skv-5065-basic-6: write: broken pipe
+write unix ->/var/tmp/824-501/skv-5065-basic-5: write: broken pipe
+write unix ->/var/tmp/824-501/skv-5065-basic-8: write: broken pipe
+write unix ->/var/tmp/824-501/skv-5065-basic-5: write: broken pipe
+unexpected EOF
+	Get Success: client 4175204710430592420 Get(7365063799450308359) : 3102806337459305377
+		Correct! Get(7365063799450308359) returns 3102806337459305377
+
+Server /var/tmp/824-501/skv-5065-basic-5 is leaving
+    Range: (14,14]  
+	pred: /var/tmp/824-501/skv-5065-basic-9
+	succ: /var/tmp/824-501/skv-5065-basic-8
+
+[RPC] /var/tmp/824-501/skv-5065-basic-8 get k/v pairs from dying predecessor /var/tmp/824-501/skv-5065-basic-5
+	Adding ({1454359726560940178 7365063799450308359}, 0) to /var/tmp/824-501/skv-5065-basic-8 ClientLatestReqID
+	Done copying /var/tmp/824-501/skv-5065-basic-8 Database & Client history. Now update kv.pred to be /var/tmp/824-501/skv-5065-basic-9
+	Update successors /var/tmp/824-501/skv-5065-basic-8 pred: /var/tmp/824-501/skv-5065-basic-9
+	    Range: (14,1]
+	Successfully passed /var/tmp/824-501/skv-5065-basic-5 (ID 3506918031191299861) databse to successor /var/tmp/824-501/skv-5065-basic-8 (ID:1765942470208024860) 
+unexpected EOF
+	RPC UpdateSucc failed
+	Update server /var/tmp/824-501/skv-5065-basic-9 successor => /var/tmp/824-501/skv-5065-basic-8
+	Update server /var/tmp/824-501/skv-5065-basic-9 successor => /var/tmp/824-501/skv-5065-basic-8
+	Test Get(7365063799450308359) 
+unexpected EOF
+	Get Success: client 4551588405941188903 Get(7365063799450308359) : 3102806337459305377
+		Correct! Get(7365063799450308359) returns 3102806337459305377
+
+Server /var/tmp/824-501/skv-5065-basic-6 is leaving
+    Range: (2,3]  
+	pred: /var/tmp/824-501/skv-5065-basic-7
+	succ: /var/tmp/824-501/skv-5065-basic-9
+write unix ->/var/tmp/824-501/skv-5065-basic-9: write: broken pipe
+	RPC fail for HashKV.SendSucc! Error in KillImpl!
+write unix ->/var/tmp/824-501/skv-5065-basic-9: write: broken pipe
+	RPC fail for HashKV.SendSucc! Error in KillImpl!
+
+[RPC] /var/tmp/824-501/skv-5065-basic-9 get k/v pairs from dying predecessor /var/tmp/824-501/skv-5065-basic-6
+	Adding ({381901641437837655 3887508618385301599}, 0) to /var/tmp/824-501/skv-5065-basic-9 ClientLatestReqID
+	Done copying /var/tmp/824-501/skv-5065-basic-9 Database & Client history. Now update kv.pred to be /var/tmp/824-501/skv-5065-basic-7
+	Update successors /var/tmp/824-501/skv-5065-basic-9 pred: /var/tmp/824-501/skv-5065-basic-7
+	    Range: (2,14]
+	Successfully passed /var/tmp/824-501/skv-5065-basic-6 (ID 2116742990489367654) databse to successor /var/tmp/824-501/skv-5065-basic-9 (ID:3173192289968543613) 
+	Update server /var/tmp/824-501/skv-5065-basic-7 successor => /var/tmp/824-501/skv-5065-basic-9
+	Test Get(7365063799450308359) 
+unexpected EOF
+	Get Success: client 1454359726560940178 Get(7365063799450308359) : 3102806337459305377
+		Correct! Get(7365063799450308359) returns 3102806337459305377
+
+Server /var/tmp/824-501/skv-5065-basic-7 is leaving
+    Range: (1,2]  
+	pred: /var/tmp/824-501/skv-5065-basic-8
+	succ: /var/tmp/824-501/skv-5065-basic-9
+
+[RPC] /var/tmp/824-501/skv-5065-basic-9 get k/v pairs from dying predecessor /var/tmp/824-501/skv-5065-basic-7
+	Adding (6114323289908404682, 8754231586378969301) to /var/tmp/824-501/skv-5065-basic-9 database
+	Adding ({1454359726560940178 7365063799450308359}, 0) to /var/tmp/824-501/skv-5065-basic-9 ClientLatestReqID
+	Adding ({4175204710430592420 6114323289908404682}, 0) to /var/tmp/824-501/skv-5065-basic-9 ClientLatestReqID
+	Done copying /var/tmp/824-501/skv-5065-basic-9 Database & Client history. Now update kv.pred to be /var/tmp/824-501/skv-5065-basic-8
+	Update successors /var/tmp/824-501/skv-5065-basic-9 pred: /var/tmp/824-501/skv-5065-basic-8
+	    Range: (1,14]
+	Successfully passed /var/tmp/824-501/skv-5065-basic-7 (ID 3175654954928366722) databse to successor /var/tmp/824-501/skv-5065-basic-9 (ID:3173192289968543613) 
+write unix ->/var/tmp/824-501/skv-5065-basic-8: write: broken pipe
+	RPC UpdateSucc failed
+unexpected EOF
+	RPC UpdateSucc failed
+	Update server /var/tmp/824-501/skv-5065-basic-8 successor => /var/tmp/824-501/skv-5065-basic-9
+	Update server /var/tmp/824-501/skv-5065-basic-8 successor => /var/tmp/824-501/skv-5065-basic-9
+	Test Get(7365063799450308359) 
+	Get Success: client 381901641437837655 Get(7365063799450308359) : 3102806337459305377
+		Correct! Get(7365063799450308359) returns 3102806337459305377
+
+Server /var/tmp/824-501/skv-5065-basic-8 is leaving
+    Range: (14,1]  
+	pred: /var/tmp/824-501/skv-5065-basic-9
+	succ: /var/tmp/824-501/skv-5065-basic-9
+
+[RPC] /var/tmp/824-501/skv-5065-basic-9 get k/v pairs from dying predecessor /var/tmp/824-501/skv-5065-basic-8
+	Adding (2426518141746492179, 7091245967576870639) to /var/tmp/824-501/skv-5065-basic-9 database
+	Adding (2767779965179407404, 5568325605022938570) to /var/tmp/824-501/skv-5065-basic-9 database
+	Adding ({1454359726560940178 7365063799450308359}, 0) to /var/tmp/824-501/skv-5065-basic-9 ClientLatestReqID
+	Adding ({4483530735385058926 2426518141746492179}, 0) to /var/tmp/824-501/skv-5065-basic-9 ClientLatestReqID
+	Adding ({790577836302874109 2767779965179407404}, 0) to /var/tmp/824-501/skv-5065-basic-9 ClientLatestReqID
+	Done copying /var/tmp/824-501/skv-5065-basic-9 Database & Client history. Now update kv.pred to be /var/tmp/824-501/skv-5065-basic-9
+	Update successors /var/tmp/824-501/skv-5065-basic-9 pred: /var/tmp/824-501/skv-5065-basic-9
+	    Range: (14,14]
+	Successfully passed /var/tmp/824-501/skv-5065-basic-8 (ID 1765942470208024860) databse to successor /var/tmp/824-501/skv-5065-basic-9 (ID:3173192289968543613) 
+	Update server /var/tmp/824-501/skv-5065-basic-9 successor => /var/tmp/824-501/skv-5065-basic-9
+	Test Get(7365063799450308359) 
+	Get Success: client 2255350061325316059 Get(7365063799450308359) : 3102806337459305377
+		Correct! Get(7365063799450308359) returns 3102806337459305377
+  ... Passed
+PASS
+ok  	umich.edu/eecs491/proj4/hashkv	24.665s
